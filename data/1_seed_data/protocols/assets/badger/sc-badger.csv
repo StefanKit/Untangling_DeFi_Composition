@@ -1,0 +1,65 @@
+Label,Id,Type,Description
+SmartVesting,0x07c0e4f4c977a29c46fb26597ea8c9105ca50b42,LOGIC,Logic contracts perform some form of actions given some input. 
+SmartTimelock,0x82c9e7dc49f800820d37a12a5a17548fe3a3a40b,LOGIC,Logic contracts perform some form of actions given some input. 
+RewardsEscrow,0xc2bc5fd13ce64efd249234c870d64569155609cd,LOGIC,Logic contracts perform some form of actions given some input. 
+BadgerGeyser,0x92b30e2b504c4afbbf518db8c74de5cdfbed369d,LOGIC,Logic contracts perform some form of actions given some input. 
+BadgerTree,0x75055d964233cc28de0cb9a3138b7283aa66453b,LOGIC,Logic contracts perform some form of actions given some input. 
+BadgerHunt,0xe0cc3f129ace3888b41a4f8f04fc01cd1974c727,LOGIC,Logic contracts perform some form of actions given some input. 
+SimpleTimelock,0x3841d891c3d28ce23efb52065f1c8d4f438e67d3,LOGIC,Logic contracts perform some form of actions given some input. 
+Controller,0x6354e79f21b56c11f48bcd7c451be456d7102a36,LOGIC,Logic contracts perform some form of actions given some input. 
+Sett,0xe4ae305b08434bf3d74e0086592627f913a258a9,LOGIC,Logic contracts perform some form of actions given some input. 
+StakingRewards,0x6dacced8d6d80b0e93a51a4303961678e8a46fa5,LOGIC,Logic contracts perform some form of actions given some input. 
+StrategyBadgerRewards,0x38b9344ffb931aba6476198095e088024cdac527,LOGIC,Logic contracts perform some form of actions given some input. 
+StrategyBadgerLpMetaFarm,0xb18d0bc54829bdfeae998b8fe9a8df10953dcaec,LOGIC,Logic contracts perform some form of actions given some input. 
+StrategyHarvestMetaFarm,0x17c118416bd713e00037125d85e58abac60c4a4e,LOGIC,Logic contracts perform some form of actions given some input. 
+StrategyPickleMetaFarm,0xf6bc36280f32398a031a7294e81131aee787d178,LOGIC,Logic contracts perform some form of actions given some input. 
+StrategyCurveGaugeTbtcCrv,0x1989c39bc167678eac6e9ade5d803cc3523011cf,LOGIC,Logic contracts perform some form of actions given some input. 
+StrategyCurveGaugeSbtcCrv,0xe3c63d747aca7fb9e9404a09520d7a2a4fefeeaa,LOGIC,Logic contracts perform some form of actions given some input. 
+StrategyCurveGaugeRenBtcCrv,0x8b60386a978dfc3241e9112db3ea009331838846,LOGIC,Logic contracts perform some form of actions given some input. 
+badger-token,0x3472a5a71965499acd81997a54bba8d852c6e53d,DAO,
+kernel,0x33d53383314190b0b885d1b6913b5a50e2d3a639,DAO,
+agent,0x8de82c4c968663a0284b01069dde6ef231d0ef9b,DAO,
+native,0x63cf44b2548e4493fd099222a1ec79f3344d9682,CONTROLLER,"Controllers handle setting the details of vault strategies by proxy, as well as handle the harvesting of vault strategies"
+harvest,0x30392694c25fbbe5c026cf846e9b6525a2ac3ec8,CONTROLLER,"Controllers handle setting the details of vault strategies by proxy, as well as handle the harvesting of vault strategies"
+native.badger-vault,0x19d97d8fa813ee2f51ad4b4e04ea08baf4dffc28,VAULT,Vaults handle the funds for setts 
+native.renCrv-vault,0x6def55d2e18486b9ddfaa075bc4e4ee0b28c1545,VAULT,Vaults handle the funds for setts 
+native.sbtcCrv-vault,0xd04c48a53c111300ad41190d63681ed3dad998ec,VAULT,Vaults handle the funds for setts 
+native.tbtcCrv0vault,0xb9d076fde463dbc9f915e5392f807315bf940334,VAULT,Vaults handle the funds for setts 
+native.uniBadgerWbtc-vault,0x235c9e24d3fb2fafd58a2e49d454fdcd2dbf7ff1,VAULT,Vaults handle the funds for setts 
+harvest.renCrv-vault,0xaf5a1decfa95baf63e0084a35c62592b774a2a87,VAULT,Vaults handle the funds for setts 
+native.digg-vault,0x7e7e112a68d8d2e221e11047a72ffc1065c38e1a,VAULT,Vaults handle the funds for setts 
+native.uniDiggWbtc-vault,0xc17078fdd324cc473f8175dc5290fae5f2e84714,VAULT,Vaults handle the funds for setts 
+yearn.wBtc-vault,0x4b92d19c11435614CD49Af1b589001b7c08cD4D5,VAULT,Vaults handle the funds for setts 
+native.sushiDiggWbtc-vault,0x88128580acdd9c04ce47afce196875747bf2a9f6,VAULT,Vaults handle the funds for setts 
+native.badger-strategy,0x75b8e21bd623012efb3b69e1b562465a68944ee6,STRATEGY,Strategies implement the logic for providing yield to a sett 
+native.renCrv-strategy,0x444b860128b7bf8c0e864bdc3b7a36a940db7d88,STRATEGY,Strategies implement the logic for providing yield to a sett 
+native.sbtcCrv-strategy,0x3efc97a8e23f463e71bf28eb19690d097797eb17,STRATEGY,Strategies implement the logic for providing yield to a sett 
+native.tbtcCrv-strategy,0xe2fa197eaa5c726426003074147a08beaa59403b,STRATEGY,Strategies implement the logic for providing yield to a sett 
+native.sushiWbtcEth-strategy,0x7A56d65254705B4Def63c68488C0182968C452ce,STRATEGY,
+native.uniBadgerWbtc-strategy,0x95826c65eb1f2d2f0edbb7ecb176563b61c60bbf,STRATEGY,Strategies implement the logic for providing yield to a sett 
+native.sushiBadgerWbtc-strategy,0x3a494D79AA78118795daad8AeFF5825C6c8dF7F1,STRATEGY,
+native.sushiDiggWbtc,0xaa8dddfe7DFA3C3269f1910d89E4413dD006D08a,STRATEGY,
+native.uniDiggWbtc-strategy,0xadc8d7322f2E284c1d9254170dbe311E9D3356cf,STRATEGY,
+native.digg-strategy,0x4a8651F2edD68850B944AD93f2c67af817F39F62,STRATEGY,
+harvest.renCrv-strategy,0xaae82e3c89e15e6f26f60724f115d5012363e030,STRATEGY,Strategies implement the logic for providing yield to a sett 
+native.badger-geyser,0xa9429271a28f8543efffa136994c0839e7d7bf77,GEYSER,"Geysers are the staking contracts for tokens deposited in their respective setts. Native refers to setts that are only using badger contracts, something else would mean some other protocols are leveraged for additional yield (example: harvest.renCrv = the harvest renCrv Super Sett)."
+native.renCrv-geyser,0x2296f174374508278dc12b806a7f27c87d53ca15,GEYSER,"Geysers are the staking contracts for tokens deposited in their respective setts. Native refers to setts that are only using badger contracts, something else would mean some other protocols are leveraged for additional yield (example: harvest.renCrv = the harvest renCrv Super Sett)."
+native.sbtcCrv-geyser,0x10fc82867013fce1bd624fafc719bb92df3172fc,GEYSER,"Geysers are the staking contracts for tokens deposited in their respective setts. Native refers to setts that are only using badger contracts, something else would mean some other protocols are leveraged for additional yield (example: harvest.renCrv = the harvest renCrv Super Sett)."
+native.tbtcCrv-geyser,0x085a9340ff7692ab6703f17ab5ffc917b580a6fd,GEYSER,"Geysers are the staking contracts for tokens deposited in their respective setts. Native refers to setts that are only using badger contracts, something else would mean some other protocols are leveraged for additional yield (example: harvest.renCrv = the harvest renCrv Super Sett)."
+native.uniBadgerWbtc-geyser,0xa207d69ea6fb967e54baa8639c408c31767ba62d,GEYSER,"Geysers are the staking contracts for tokens deposited in their respective setts. Native refers to setts that are only using badger contracts, something else would mean some other protocols are leveraged for additional yield (example: harvest.renCrv = the harvest renCrv Super Sett)."
+harvest.renCrv,0x612f681BCd12A0b284518D42D2DBcC73B146eb65,GEYSER,
+native.badger-reward,0xbd9c69654b8f3e5978dfd138b00cb0be29f28ccf,REWARD,Rewards contracts show the amount distributed to each address and other information on rewards
+native.uniBadgerWbtc-reward,0x0c79406977314847a9545b11783635432d7fe019,REWARD,Rewards contracts show the amount distributed to each address and other information on rewards
+Uniswap BADGER/wBTC LP Pair,0xcd7989894bc033581532d2cd88da5db0a4b12859,INDIVIDUAL,
+daoBadgerTimelock,0x410ba37c9225c55f3a4d1764105c78ac7ba1a8b7,INDIVIDUAL,
+teamVesting,0x871e65e212c4d5515e72e8d011d3ebd7a427f55b,INDIVIDUAL,
+badgerHunt,0x394dcfbcf25c5400fcc147ebd9970ed34a474543,INDIVIDUAL,
+badgerTree,0x660802fc641b154aba66a62137e71f331b6d787a,INDIVIDUAL,
+rewardsEscrow,0x19d099670a21bc0a8211a89b84cedf59abb4377f,INDIVIDUAL,
+deployer,0xda25ee226e534d868f0dd8a459536b03fee9079b,INDIVIDUAL,
+guardian,0x29f7f8896fb913cf7f9949c623f896a154727919,INDIVIDUAL,
+keeper,0x872213e29c85d7e30f1c8202fc47ed1ec124bb1d,INDIVIDUAL,
+devProxyAdmin,0x20dce41acca85e8222d6861aa6d23b6c941777bf,INDIVIDUAL,
+daoProxyAdmin,0x11a9d034b1bbfbbdcac9cb3b86ca7d5df05140f2,INDIVIDUAL,
+devMultisig,0xb65cef03b9b89f99517643226d76e286ee999e77,INDIVIDUAL,
+digg,0x798d1be841a82a273720ce31c822c61a67a601c3,TOKEN,

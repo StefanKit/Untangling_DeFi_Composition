@@ -1,0 +1,9 @@
+Label,Id
+Hegic WBTC Options,0x3961245db602ed7c03eeccda33ea3846bd8723bd
+Hegic ETH Options,0xefc0eeadc1132a12c9487d800112693bf49ecfa2
+Hegic WBTC Bidirectional Liquidity Pool,0x20dd9e22d22dd0a6ef74a520cb08303b5fad5de7
+Hegic ETH Bidirectional Liquidity Pool,0x878f15ffc8b894a1ba7647c7176e4c01f74e140b
+Hegic WBTC Staking Lots,0x840a1ae46b7364855206eb5b7286ab7e207e515b
+Hegic ETH Staking Lots,0x1ef61e3e5676ec182eed6f052f8920fd49c7f69a
+BTC/USD ChainLink price feed ,0xf4030086522a5beea4988f8ca5b36dbc97bee88c
+ETH/USD ChainLink price feed,0x5f4ec3df9cbd43714fe2740f5e3616155c5b8419

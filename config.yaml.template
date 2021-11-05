@@ -1,0 +1,14 @@
+output:
+    path_output: "./output"
+    
+figures:
+    path_figures: "./output/figures"
+    
+tables:
+    path_tables: "./output/tables"
+  
+files:    
+    path_prot_colors: "./data"
+    path_seed_data: "./data/1_seed_data"
+    path_chain_data: "./data/1_chain_data"
+    path_preprocess_data: "./data/1_preprocess_data"
