@@ -1,0 +1,82 @@
+,Name,Chain,Category,Locked (USD),1 Day %
+1,Maker,Ethereum,Lending,$5.97B,2.12%
+2,Compound,Ethereum,Lending,$5.03B,0.90%
+3,Aave,Ethereum,Lending,$4.57B,-1.38%
+4,Curve Finance,Ethereum,DEXes,$3.95B,-0.25%
+5,Uniswap,Ethereum,DEXes,$3.66B,1.50%
+6,SushiSwap,Ethereum,DEXes,$3.47B,5.48%
+7,Synthetix,Ethereum,Derivatives,$2.32B,-3.22%
+8,1inch Liquidity Protocol,Ethereum,DEXes,$1.46B,-0.25%
+9,Balancer,Ethereum,DEXes,$1.35B,0.05%
+10,Badger DAO,Ethereum,Assets,$1.29B,-2.76%
+11,Bancor,Ethereum,DEXes,$1.26B,8.51%
+12,InstaDApp,Ethereum,Lending,$1.04B,-1.04%
+13,RenVM,Ethereum,Assets,$992.2M,-1.41%
+14,Alpha Homora,Ethereum,Lending,$741.9M,0.62%
+15,Harvest Finance,Ethereum,Assets,$415.2M,-1.59%
+16,Flexa,Ethereum,Payments,$410.0M,0.32%
+17,Vesper,Ethereum,Assets,$404.1M,2.63%
+18,yearn.finance,Ethereum,Assets,$306.3M,-1.81%
+19,Tornado Cash,Ethereum,Payments,$288.1M,1.36%
+20,Reflexer,Ethereum,Lending,$268.1M,5.02%
+21,Nexus Mutual,Ethereum,Derivatives,$248.3M,2.15%
+22,dYdX,Ethereum,Lending,$233.9M,6.17%
+23,KEEP Network,Ethereum,Assets,$210.8M,1.13%
+24,Loopring,Ethereum,DEXes,$182.2M,-0.74%
+25,Set Protocol,Ethereum,Assets,$167.3M,-0.62%
+26,C.R.E.A.M. Finance,Ethereum,Lending,$144.5M,6.67%
+27,Idle Finance,Ethereum,Lending,$123.9M,-2.55%
+28,Polygon,Ethereum,Payments,$121.4M,1.62%
+29,Index Coop,Ethereum,Assets,$117.0M,-1.07%
+30,cvault.finance,Ethereum,Assets,$69.1M,1.93%
+31,HEGIC,Ethereum,Derivatives,$57.1M,0.35%
+32,mStable,Ethereum,Assets,$56.3M,0.13%
+33,TrueFi,Ethereum,Lending,$55.2M,2.51%
+34,DODO,Ethereum,DEXes,$55.1M,0.12%
+35,Lightning Network,Bitcoin,Payments,$52.8M,-1.22%
+36,LINKSWAP,Ethereum,DEXes,$47.9M,0.54%
+37,DerivaDEX,Ethereum,Derivatives,$43.5M,0.52%
+38,dForce,Ethereum,Assets,$42.2M,-3.46%
+39,DeFi Swap,Ethereum,DEXes,$41.8M,0.44%
+40,xDai,Ethereum,Payments,$40.8M,22.73%
+41,Metronome,Ethereum,Assets,$38.6M,2.98%
+42,Futureswap,Ethereum,Derivatives,$36.9M,-1.39%
+43,B.Protocol,Ethereum,Lending,$29.0M,2.56%
+44,bZx,Ethereum,Lending,$27.9M,-2.33%
+45,88mph,Ethereum,Lending,$25.8M,-0.34%
+46,Pickle Finance,Ethereum,Assets,$22.0M,10.53%
+47,PowerIndex,Ethereum,DEXes,$19.7M,-2.13%
+48,dHEDGE,Ethereum,Assets,$18.9M,-4.88%
+49,Gnosis,Ethereum,DEXes,$17.6M,2.83%
+50,Cover Protocol,Ethereum,Derivatives,$17.3M,4.69%
+51,Notional,Ethereum,Lending,$16.2M,1.12%
+52,Swerve Finance,Ethereum,DEXes,$15.6M,-2.04%
+53,Kyber,Ethereum,DEXes,$13.0M,0.68%
+54,DeversiFi,Ethereum,DEXes,$11.8M,1.40%
+55,Enzyme Finance,Ethereum,Assets,$10.0M,1.73%
+56,Value DeFi,Ethereum,Assets,$9.0M,-3.75%
+57,QIAN,Ethereum,Lending,$8.3M,-0.78%
+58,Erasure,Ethereum,Derivatives,$7.9M,-2.21%
+59,ForTube,Ethereum,Lending,$7.9M,-3.65%
+60,Opyn,Ethereum,Derivatives,$7.9M,1.22%
+61,DDEX,Ethereum,Lending,$6.9M,0.96%
+62,Opium Network,Ethereum,Derivatives,$6.6M,-19.00%
+63,Siren,Ethereum,Derivatives,$5.7M,-5.74%
+64,Snowswap,Ethereum,DEXes,$5.4M,-2.16%
+65,Value Liquid,Ethereum,DEXes,$4.7M,-12.83%
+66,S Finance,Ethereum,DEXes,$4.4M,-0.29%
+67,PieDAO,Ethereum,Assets,$4.0M,-0.12%
+68,DEXTF,Ethereum,Assets,$3.2M,4.84%
+69,Augur,Ethereum,Derivatives,$2.2M,2.37%
+70,MCDEX,Ethereum,Derivatives,$2.1M,2.15%
+71,C.R.E.A.M. Swap,Ethereum,DEXes,$1.8M,2.38%
+72,Primitive,Ethereum,Derivatives,$1.1M,-0.47%
+73,PerlinX,Ethereum,Derivatives,$1.1M,-13.82%
+74,RAY,Ethereum,Lending,$987.0K,-0.05%
+75,DFI.money,Ethereum,Assets,$929.2K,-0.07%
+76,DeFiner,Ethereum,Lending,$875.5K,0.36%
+77,PEAKDEFI,Ethereum,Assets,$495.8K,0.19%
+78,Auctus,Ethereum,Derivatives,$215.5K,1.24%
+79,UniTrade,Ethereum,DEXes,$103.7K,10.76%
+80,Connext,Ethereum,Payments,$12.8K,-0.09%
+,TVL,,,$39.19B,

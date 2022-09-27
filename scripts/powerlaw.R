@@ -6,11 +6,11 @@ library("yaml")
 library("scales")
 library("tikzDevice")
 
-
 doc <- yaml.load_file("./config.yaml")
 path_tables <- doc$tables$path_tables
 path_figures <- doc$figures$path_figures
 tab_file <- paste(path_tables,"/deg_dist_R.txt", sep = "")
+
 
 cat("Degree distribution analysis using R poweRlaw package.",
     file = tab_file)
@@ -42,17 +42,6 @@ powerlaw_analysis <- function(filename, bootstr = TRUE) {
   plot.aggdata <- plot.data[,.(y=max(y)),by=.(x)]
   fit.data <- lines(m_pl_con, draw = F)
   
-  plt <- ggplot() + 
-    geom_text(aes(x=est_con$xmin, y=0.9),label = 'Xmin', color="gray",size=4,hjust = -0.25) +
-    geom_vline(xintercept=est_con$xmin,color = 'gray') + 
-    geom_point(data = plot.aggdata,col = 'navyblue',mapping = aes(x, y), shape=1) + 
-    labs(x="Degree", y="CCDF") + theme_bw() + annotation_logticks() + #P(X≥x)
-    scale_x_log10(breaks = trans_breaks("log10", function(x) 10^x),
-                  labels = trans_format("log10", math_format(10^.x))) +
-    scale_y_continuous(trans='log10') + 
-    geom_line(data=fit.data, aes(x, y), colour="forestgreen",linetype = "dashed")
-  ggsave(filename=sprintf("%s/%s_ccdf_r.pdf",path_figures,filename),plot = plt,
-         scale = 1, height = 4, width = 6,dpi = 300)
   
   
   cat(sprintf("hat theta  = (hat k_min, hat alpha) = (%d,%.3f).\n\n",
@@ -101,50 +90,42 @@ powerlaw_analysis <- function(filename, bootstr = TRUE) {
   return(m_pl_con)
 }
 
-
-res1 <- powerlaw_analysis("defi_ca_network_pro_degree", bootstr = TRUE)
-res2 <- powerlaw_analysis("defi_ca_network_degree", bootstr = TRUE)
-
-est_con1 = estimate_xmin(res1)
-plot.data1 <- plot(res1, draw = F) %>% as.data.table()
-plot.aggdata1 <- plot.data1[,.(y=max(y)),by=.(x)]
-fit.data1 <- lines(res1, draw = F)
-
-est_con2 = estimate_xmin(res2)
-plot.data2 <- plot(res2, draw = F) %>% as.data.table()
-plot.aggdata2 <- plot.data2[,.(y=max(y)),by=.(x)]
-fit.data2 <- lines(res2, draw = F)
-
-plt <- ggplot() + 
-  geom_point(data=plot.aggdata1,mapping = aes(x, y),color = 'navyblue',shape = 20) + #,shape = 20
-  geom_line(data=fit.data1, aes(x, y), colour="red",linetype = "dashed") +
-  geom_point(data=plot.aggdata2,mapping = aes(x, y),color = 'forestgreen',shape = 4) + #, shape = 4
-  geom_line(data=fit.data2, aes(x, y), colour="red",linetype = "dashed") +
-  labs(x="Degree", y="CCDF") + 
-  theme_light() + #annotation_logticks() + 
-  theme(legend.position = "none") +
-  scale_x_continuous(trans='log10') +
-  #scale_x_log10(breaks = trans_breaks("log10", function(x) 10^x),
-  #              labels = trans_format("log10", math_format(1e-0.x))) +
-  scale_y_continuous(trans='log10') 
-ggsave(filename=sprintf("%s/ccdf_together.pdf",path_figures),plot = plt,
-       scale = 1, height = 3.5, width = 5,dpi = 300)
-#dev.off()
-
-TikzFromPlot <- function(plot, name, 
-                         width = 3.2, height = 2.7){
-  # enables using e.g. #, %
-  options(
-    tikzSanitizeCharacters = c('%','$','}','{','^','_','#','&','~'),
-    tikzReplacementCharacters = c('\\%','\\$','\\}','\\{','\\^{}','\\_{}',
-                                  '\\#','\\&','\\char`\\~')
-  )
-  tikz(file = name,
-       standAlone=F, width = width, height = height, sanitize = TRUE)
-  print(plot)
-  #Necessary to close or the tikxDevice .tex file will not be written
-  dev.off()
+make_plot <- function(res1,res2) {
+  
+  #invisible(capture.output(est_con1 = estimate_xmin(res1)))
+  est_con1 = estimate_xmin(res1)
+  plot.data1 <- plot(res1, draw = F) %>% as.data.table()
+  plot.aggdata1 <- plot.data1[,.(y=max(y)),by=.(x)]
+  fit.data1 <- lines(res1, draw = F)
+  
+  #invisible(capture.output(est_con2 = estimate_xmin(res2)))
+  est_con2 = estimate_xmin(res2)
+  plot.data2 <- plot(res2, draw = F) %>% as.data.table()
+  plot.aggdata2 <- plot.data2[,.(y=max(y)),by=.(x)]
+  fit.data2 <- lines(res2, draw = F)
+  
+  plt <- ggplot() + 
+    geom_point(data=plot.aggdata1,mapping = aes(x, y),color = 'navyblue',shape = 20) + #,shape = 20
+    geom_line(data=fit.data1, aes(x, y), colour="red",linetype = "dashed") +
+    geom_point(data=plot.aggdata2,mapping = aes(x, y),color = 'forestgreen',shape = 4) + #, shape = 4
+    geom_line(data=fit.data2, aes(x, y), colour="red",linetype = "dashed") +
+    labs(x="Degree", y="CCDF") + 
+    theme_light() + #annotation_logticks() + 
+    theme(aspect.ratio = 0.5,legend.position = "none") +
+    scale_x_continuous(trans='log10') +
+    #scale_x_log10(breaks = trans_breaks("log10", function(x) 10^x),
+    #              labels = trans_format("log10", math_format(1e-0.x))) +
+    scale_y_continuous(trans='log10') 
+  
+  print(plt)
+  
+  #ggsave(filename=sprintf("%s/ccdf_together.pdf",path_figures),plot = plt,
+  #       scale = 1, height = 3.5, width = 5,dpi = 300)
+  
+  return(plt)
 }
 
+suppressMessages(res1 <- powerlaw_analysis("defi_ca_network_pro_degree", bootstr = FALSE))
+suppressMessages(res2 <- powerlaw_analysis("defi_ca_network_degree", bootstr = FALSE))
 
-TikzFromPlot(plt, sprintf("%s/ccdf_together.tex",path_figures), height = 2)
+suppressMessages(plt <- make_plot(res1,res2))
