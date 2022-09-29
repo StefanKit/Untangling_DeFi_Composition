@@ -45,6 +45,7 @@ TikzFromPlot <- function(plot, name = "test.tex", width = 3, height = 2){
 }
 
 create_tree_map_plot <- function(
+    select_pro = "1inch",
     file_path_bb_agg_pro = paste0(path_building_block_data,"/building_blocks_agg/","BB_agg_pro_11565019-12964999.csv.gz"),
     file_hash_tree = paste0(path_building_block_data,"/building_blocks_agg/","hash_tree_11565019-12964999.csv.gz"),
     outpath_treemap = NULL){
@@ -73,7 +74,7 @@ create_tree_map_plot <- function(
   count_pro_depth1[!is.na(pro_decom), appearPro_N := sapply(pro_decom, function(s){1+ lengths(regmatches(s, gregexpr(",", s)))})]
   count_pro_depth1[is.na(pro_decom), `:=` (pro_decom = "NONE", appearPro_N = 0)]
   
-  tree_depth0 <- count_pro_depth1 %>% .[ext_protocol == "1inch"] %>% 
+  tree_depth0 <- count_pro_depth1 %>% .[ext_protocol == select_pro] %>%
     .[, .(count = sum(count)), .(ext_protocol, pro_decom, appearPro_N)] %>% 
     .[order(count, decreasing = TRUE)] %>% 
     treemap(. , index=c("appearPro_N","pro_decom"), vSize="count", type="index") 
@@ -107,7 +108,7 @@ create_tree_map_plot <- function(
   
   if(!is.null(outpath_treemap)){
     
-    #file.path(paste0(path_figures,"/treemaps/","1inch",".pdf"))
+    #file.path(paste0(path_figures,"/treemaps/",select_pro,".pdf"))
     ggsave(filename=outpath_treemap, 
            plot=plot_depth0,
            width = 5.5, height = 2.5, units = "cm", dpi = 300, scale = 2)
