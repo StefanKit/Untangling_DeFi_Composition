@@ -29,6 +29,8 @@ Further, install Python libraries from pip, stored in `requirement.txt`.
 
     pip install -r requirements.txt
     
+Note: in case of any issues, make sure you have all os-packages (e.g. pygraphviz, libxcursor-dev:i386) installed.
+
 Scripts use directory references to access and store information. 
 Copy the template and adjust the paths in the config file `config.yaml` to your reference directories.
 
